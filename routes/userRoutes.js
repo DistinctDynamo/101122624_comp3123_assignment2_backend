@@ -50,7 +50,7 @@ userRoutes.post('/user/login',query('password').notEmpty(),async(req,res)=>{
             });
         }
         res.status(500).send({
-            message: "Error retrieving user with id " + req.body._id
+            message: "Invalid Password"
         });
     }
 });

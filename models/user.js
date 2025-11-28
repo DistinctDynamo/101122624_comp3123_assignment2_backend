@@ -33,12 +33,11 @@ userSchema.pre('save', async function(next) {
   try {
     this.updated_at = Date.now();
 
-    if (!this.isModified('password')) return next();
+    if (!this.isModified('password')) return;
     
     const salt = await bcrypt.genSalt(10);
     this.password = await bcrypt.hash(this.password, salt);
-    
-    next(); 
+     
   } catch (error) {
     next(error); 
   }
