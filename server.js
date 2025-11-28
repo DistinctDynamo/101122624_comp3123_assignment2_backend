@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes.js')
 const employeeRoutes = require('./routes/employeeRoutes.js')
 
-const DB_URL = "mongodb+srv://nguyensteven578_db_user:WWeB6p1G9Ao8dLFK@clustercomp3123.qnimjux.mongodb.net/?retryWrites=true&w=majority&appName=ClusterComp3123";
+const DB_URL = "mongodb+srv://nguyensteven578_db_user:Breaksword@clustercomp3123.qnimjux.mongodb.net/?appName=ClusterComp3123";
 const PORT = 8081;
-
+//mongodb+srv://nguyensteven578_db_user:WWeB6p1G9Ao8dLFK@clustercomp3123.qnimjux.mongodb.net/?retryWrites=true&w=majority&appName=ClusterComp3123
 const app = express();
 
 app.use(express.json())
