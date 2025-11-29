@@ -15,7 +15,7 @@ employeeRoutes.get('/emp/employees', async (req, res) => {
 });
 
 employeeRoutes.post('/emp/employees', async (req, res) => {
-    const content = req.body.content;
+    const content = req.body;
     try {
         const employee = new employeeModel({
             first_name: content.first_name,
@@ -98,7 +98,7 @@ employeeRoutes.get('/emp/employees/:search/:topic', async (req, res) => {
 });
 
 employeeRoutes.put('/emp/employees/:id', async (req, res) => {
-    const content = req.body.content;
+    const content = req.body;
     try {
         if (!content.updated_at) {
             content.updated_at = Date.now();

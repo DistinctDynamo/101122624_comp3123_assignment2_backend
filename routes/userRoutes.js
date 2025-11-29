@@ -4,7 +4,7 @@ const userRoutes = express.Router();
 const {query} = require('express-validator')
 
 userRoutes.post('/user/signup', async (req, res) => {
-    const content = req.body.content;
+    const content = req.body;
     try {
         const user = new userModel({
             username: content.username,
