@@ -66,9 +66,6 @@ employeeRoutes.get('/emp/employees/:search/:topic', async (req, res) => {
         const { search, topic } = req.params;
        
         switch(search){
-            case "first_name":
-                 employee = await employeeModel.find({first_name:`${topic}`});
-            break;
             case "position":
                   employee = await employeeModel.find({position:`${topic}`});
             break;
