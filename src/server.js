@@ -4,7 +4,7 @@ const userRoutes = require('./routes/userRoutes.js')
 const employeeRoutes = require('./routes/employeeRoutes.js')
 
 const DB_URL = "mongodb+srv://nguyensteven578_db_user:r9JbwDxnu8iicINT@clustercomp3123.qnimjux.mongodb.net/?appName=ClusterComp3123";
-const PORT = 8081;
+const PORT = 8082;
 
 const app = express();
 
@@ -28,7 +28,7 @@ app.use('/api/v1', employeeRoutes)
 mongoose.connect(DB_URL).then(() => {
     console.log("Successfully connected to the database mongoDB Atlas Server");    
     app.listen(PORT, () => {
-    console.log("Server is listening on port 8081");
+    console.log("Server is listening on port 8082");
 });
 }).catch(err => {
     console.log('Could not connect to the database. Exiting now...', err);
